@@ -1,0 +1,118 @@
+<sxs>
+    <scene root="sgi-t03-g01-t1" axis_length="5"/>
+
+    <views default="defaultCamera">
+        <perspective id="defaultCamera" near="0.1" far="500" angle="45">
+            <from x="30" y="15" z="30" />
+            <to x="0" y="-2" z="0" />
+        </perspective>
+        <perspective id="backPerspective" near="0.1" far="500" angle="45">
+            <from x="0" y="8" z="-10" />
+            <to x="0" y="-2" z="0" />
+        </perspective>
+        <perspective id="frontPerspective" near="0.1" far="500" angle="45">
+            <from x="0" y="8" z="10" />
+            <to x="0" y="-2" z="0" />
+        </perspective>
+        <perspective id="frontPerspective" near="0.1" far="500" angle="45">
+            <from x="0" y="8" z="10" />
+            <to x="0" y="-2" z="0" />
+        </perspective>
+        <ortho id="topOrtho" near="0.1" far="500" left="-15" right="15" top="8" bottom="-8">
+            <from x="0" y="30" z="0" />
+            <to x="0" y="10" z="0" />
+            <up x="0.0" y="1.0" z="1" />
+        </ortho>
+         <ortho id="frontSideOrtho" near="0.1" far="500" left="15" right="-15" top="8" bottom="-8">
+            <from x="20" y="0" z="450" />
+            <to x="0" y="0" z="0" />
+            <up x="0" y="1" z="0" />
+        </ortho>
+    </views>
+
+    <ambient>
+        <ambient r="0.5" g="0.5" b="0.5" a="1.0" />
+        <background r="0.1" g="0.1" b="0.7" a="1.0" />
+    </ambient>
+
+    <lights>
+        <omni id="white_light" enabled="1">
+            <location x="9.8" y="11.9" z="10" w="1.0" />
+            <ambient r="0" g="0" b="0" a="1.0" />
+            <diffuse r="1.0" g="1.0" b="1.0" a="1.0" />
+            <specular r="1.0" g="1.0" b="1.0" a="1.0" />
+        </omni>
+        <omni id="red_light" enabled="1">
+            <location x="-9.8" y="12" z="10" w="1.0" />
+            <ambient r="0" g="0" b="0" a="1.0" />
+            <diffuse r="1.0" g="0" b="0" a="1.0" />
+            <specular r="1.0" g="1.0" b="1.0" a="1.0" />
+        </omni>
+        <omni id="blue_light" enabled="1">
+            <location x="0" y="5" z="0" w="1.0" />
+            <ambient r="0" g="0" b="0" a="1.0" />
+            <diffuse r="0" g="0" b="1.0" a="1.0" />
+            <specular r="1.0" g="1.0" b="1.0" a="1.0" />
+        </omni>
+        <omni id="green_light" enabled="1">
+            <location x="0" y="5" z="0" w="1.0" />
+            <ambient r="0" g="0" b="0" a="1.0" />
+            <diffuse r="0" g="1.0" b="0" a="1.0" />
+            <specular r="1.0" g="1.0" b="1.0" a="1.0" />
+        </omni>
+        <spot id="sunLight" enabled="1" angle="0" exponent="100">
+
+            <location x="-2" y="3.2" z="-1" w="0" />
+
+            <target x="1" y="3" z="-2" />
+
+            <ambient r="0" g="0" b="0" a="0" />
+
+            <diffuse r="1" g="1" b="1" a="1" />
+
+            <specular r="1" g="1" b="1" a="1" />
+            <attenuation constant="1" linear="0" quadratic="0" />
+
+        </spot>
+    </lights>
+
+    <textures>
+        <texture id="wood" file="scenes/images/bark.jpg" />
+    </textures>
+    
+
+    <materials>
+        <material id="dark_brown" shininess="10">
+            <emission r="0.0" g="0.0" b="0.0" a="1.0" />
+            <ambient r="0.3" g="0.21" b="0.14" a="1.0" />
+            <diffuse r="0.3" g="0.21" b="0.14" a="1.0" />
+            <specular r="0.0" g="0.0" b="0.0" a="1.0" />
+        </material>
+    </materials>
+
+    <transformations>
+    </transformations>
+
+    <primitives>
+    </primitives>
+
+    <animations>
+
+    </animations>
+
+    <components>
+    
+        <component id="sgi-t03-g01-t1">
+            <transformation>
+            </transformation>
+            <texture id="wood"/>
+            <materials>
+                <material id="dark_brown" />
+            </materials>
+            <children>
+                 
+            </children> 
+        </component>
+            
+    </components>
+</sxs>
